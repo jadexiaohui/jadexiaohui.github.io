@@ -8,5 +8,10 @@ navLinks.forEach(link => {
   });
 });
 
+// Mobile hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-links");
 
-
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
