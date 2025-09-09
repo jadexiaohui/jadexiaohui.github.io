@@ -311,3 +311,35 @@ html {
   }
 }
 
+/* Hamburger default hidden */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  padding: 0 20px;
+}
+
+/* Show hamburger and hide menu on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #ffafb8;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+
