@@ -15,3 +15,4 @@ const navMenu = document.getElementById("nav-links");
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("show");
 });
+
