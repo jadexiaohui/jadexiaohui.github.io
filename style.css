@@ -57,14 +57,12 @@ main p {
   line-height: 1.6;
 }
 
-/* ------------------------- */
 /* Navigation bar */
-/* ------------------------- */
 nav {
   background-color: #ffafb8;
   padding: 15px 20px;
   display: flex;
-  justify-content: center;  /* center content horizontally */
+  justify-content: center; /* keep menu centered on desktop */
   align-items: center;
   position: fixed; 
   top: 0;
@@ -87,7 +85,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center; /* centered on desktop */
+  justify-content: center;
   gap: 25px;
   padding: 0;
   margin: 0;
@@ -120,9 +118,7 @@ hr {
   width: 80%;
 }
 
-/* ------------------------- */
 /* Education section */
-/* ------------------------- */
 .education {
   display: flex;
   justify-content: center;
@@ -148,9 +144,7 @@ hr {
   margin: 5px 0;
 }
 
-/* ------------------------- */
 /* Projects */
-/* ------------------------- */
 .projects {
   display: flex;
   justify-content: center;
@@ -211,9 +205,7 @@ hr {
   color: #333;
 }
 
-/* ------------------------- */
 /* Footer */
-/* ------------------------- */
 footer {
   background-color: #ffafb8;
   padding: 30px;
@@ -253,31 +245,27 @@ html {
 /* ------------------------- */
 @media (max-width: 768px) {
   nav {
-    justify-content: center; /* center hamburger */
-    text-align: center;
+    justify-content: space-between; /* hamburger left, menu hidden */
   }
 
   .hamburger {
-    display: block; /* show hamburger on mobile */
+    display: block; /* show hamburger only on mobile */
   }
 
   nav ul {
-    display: none; /* hide menu until hamburger clicked */
+    display: none; /* hide menu on mobile */
     flex-direction: column;
     background-color: #ffafb8;
     position: absolute;
     top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    padding: 15px 25px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
     gap: 12px;
-    align-items: center;
-    border-radius: 12px;
   }
 
   nav ul.show {
-    display: flex; /* show when toggled */
+    display: flex; /* toggle show when hamburger clicked */
   }
 
   main {
@@ -312,12 +300,7 @@ html {
     font-size: 1rem;
   }
 
-  .projects {
-    justify-content: center;
-  }
-
   .project-card {
-    margin: 0 auto 25px;
     text-align: center;
     font-size: 0.95rem;
   }
@@ -328,7 +311,6 @@ html {
   }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
   main h1 {
     font-size: 1.5rem;
@@ -351,4 +333,5 @@ html {
     padding: 6px 10px;
   }
 }
+
 
