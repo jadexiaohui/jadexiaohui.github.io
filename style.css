@@ -1,4 +1,4 @@
-/* Reset & Fonts */
+/* Reset */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body, h1, p, ul {
@@ -9,102 +9,17 @@ body, h1, p, ul {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff0db;
-  padding-top: 70px; /* keep space for fixed nav */
+  line-height: 1.6;
 }
 
-/* --------------------- */
-/* Navigation Bar        */
-/* --------------------- */
-.menu-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffafb8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links li {
-  margin: 0;
-}
-
-.nav-links a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 6px;
-  transition: background 0.3s;
-  font-size: 1.1rem;
-}
-
-.nav-links a:hover {
-  background-color: #efe9e2;
-}
-
-.nav-links a.active {
-  background-color: #efe9e2;
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: black;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Animation into X */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* --------------------- */
-/* Main Content          */
-/* --------------------- */
+/* Center content but keep flexibility */
 main {
   padding: 100px;
-  display: flex;
+  display: flex;               
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
+  gap: 100px;                  
+  flex-wrap: wrap;             
   text-align: left;
 }
 
@@ -125,34 +40,73 @@ main {
 
 main h1 {
   font-size: 3rem;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: #333;
 }
 
 main h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
   color: #333;
 }
 
 main p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
 }
 
-/* Section Divider */
+/* Navigation bar */
+nav {
+  background-color: #ffafb8;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background-color: #efe9e2;
+}
+
+nav a.active {
+  background-color: #efe9e2;
+}
+
 hr {
   border: none;
   height: 2px;
   background-color: #ffafb8;
-  margin: 40px auto;
+  margin-top: 20px;
   width: 80%;
 }
 
-/* --------------------- */
-/* Education Section     */
-/* --------------------- */
+/* Education section */
 .education {
   display: flex;
   justify-content: center;
@@ -166,7 +120,7 @@ hr {
 }
 
 .edu-entry {
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
 }
 
 .education-text ul {
@@ -178,9 +132,7 @@ hr {
   margin: 5px 0;
 }
 
-/* --------------------- */
-/* Projects Section      */
-/* --------------------- */
+/* Projects */
 .projects {
   display: flex;
   justify-content: center;
@@ -192,21 +144,23 @@ hr {
 .projects-text {
   max-width: 850px;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
+  padding-top: 20px;
 }
 
 .projects-text h1 {
   margin-bottom: 40px;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
-/* Project cards */
 .project-card {
   background: #ffecf2;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 25px;
-  margin-bottom: 25px;
+  margin: 0 auto 25px; /* center card */
+  max-width: 600px;    /* prevent stretching too wide */
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -219,14 +173,14 @@ hr {
 
 .project-card h2 {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #000;
+  color: #000000;
 }
 
 .project-card h2 a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
   transition: color 0.3s ease;
 }
 
@@ -235,14 +189,11 @@ hr {
 }
 
 .project-card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
-  line-height: 1.6;
 }
 
-/* --------------------- */
-/* Footer                */
-/* --------------------- */
+/* Footer */
 footer {
   background-color: #ffafb8;
   padding: 30px;
@@ -256,8 +207,8 @@ footer {
 }
 
 .footer-icons img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   transition: transform 0.3s;
 }
 
@@ -266,65 +217,45 @@ footer {
 }
 
 .footer-text {
-  font-size: 1rem;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  font-size: 0.95rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
   color: #333;
   font-weight: bold;
 }
 
-/* --------------------- */
-/* Mobile Responsive     */
-/* --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------- */
+/* Mobile Responsive Section */
+/* ------------------------- */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px 20px;
     gap: 30px;
+    margin-top: 100px; 
   }
 
   .profile-pic {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
   }
 
   .intro-text {
     max-width: 100%;
-    text-align: center;
     padding: 0 10px;
+    text-align: center;
   }
 
-  main h1,
-  main h2 {
+  main h1 {
     font-size: 2rem;
   }
 
-  main p {
-    font-size: 1rem;
-  }
-
-  /* Mobile nav */
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #ffafb8;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    border-radius: 8px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-@media (max-width: 480px) {
-  main h1,
   main h2 {
     font-size: 1.6rem;
   }
@@ -333,8 +264,50 @@ footer {
     font-size: 1rem;
   }
 
+  /* Navbar collapses into stacked layout */
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    display: block;
+  }
+
+  /* Project cards */
+  .project-card {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
   .footer-icons img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 }
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  main h2 {
+    font-size: 1.2rem;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+}
+
