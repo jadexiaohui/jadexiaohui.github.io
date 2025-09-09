@@ -60,8 +60,10 @@ main p {
 /* Navigation bar */
 nav {
   background-color: #ffafb8;
-  padding: 15px 0;
-  text-align: center;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed; 
   top: 0;
   left: 0;
@@ -70,14 +72,32 @@ nav {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Hamburger button */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  padding: 0 20px;
+}
+
+/* Nav links hidden by default */
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 0;
+  display: none; /* hidden */
+  flex-direction: column;
+  background-color: #ffafb8;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
   margin: 0;
-  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav ul.show {
+  display: flex; /* shown when toggled */
 }
 
 nav a {
@@ -88,6 +108,8 @@ nav a {
   border-radius: 6px;
   transition: background 0.3s;
   font-size: 1.1rem;
+  display: block;
+  text-align: center;
 }
 
 nav a:hover {
@@ -159,8 +181,8 @@ hr {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 25px;
-  margin: 0 auto 25px; /* center card */
-  max-width: 600px;    /* prevent stretching too wide */
+  margin: 0 auto 25px;
+  max-width: 600px;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -264,18 +286,6 @@ html {
     font-size: 1rem;
   }
 
-  /* Navbar collapses into stacked layout */
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 1rem;
-    display: block;
-  }
-
-  /* Project cards */
   .project-card {
     text-align: center;
     font-size: 0.95rem;
@@ -287,7 +297,6 @@ html {
   }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
   main h1 {
     font-size: 1.5rem;
@@ -311,35 +320,5 @@ html {
   }
 }
 
-/* Hamburger default hidden */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: black;
-  padding: 0 20px;
-}
-
-/* Show hamburger and hide menu on mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #ffafb8;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-}
 
 
