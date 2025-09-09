@@ -1,3 +1,4 @@
+You said:
 /* Reset */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -45,7 +46,7 @@ main h1 {
 }
 
 main h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 15px;
   color: #333;
 }
@@ -110,7 +111,7 @@ hr {
 }
 
 .edu-entry {
-  margin-bottom: 30px;
+  margin-bottom: 30px; /* Adds space between education entries */
 }
 
 .education-text ul {
@@ -124,11 +125,11 @@ hr {
 
 .projects {
   display: flex;
-  flex-direction: column;   
-  align-items: center;      
+  justify-content: center;
   padding: 40px 20px;
   text-align: center;
   background: #fff0db;
+  
 }
 
 .projects-text {
@@ -139,10 +140,11 @@ hr {
 }
 
 .projects-text h1 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
+  margin-bottom: 40px; /* adjust value as needed */
+  font-size: 3rem;     /* optional: tweak size */
   font-family: 'Poppins', sans-serif;
 }
+
 
 .project-card {
   background: #ffecf2;
@@ -153,8 +155,6 @@ hr {
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 600px;
 }
 
 .project-card:hover {
@@ -164,7 +164,7 @@ hr {
 
 .project-card h2 {
   margin-top: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #000000;
   font-family: 'Poppins', sans-serif;
@@ -173,7 +173,7 @@ hr {
 .project-card h2 a {
   text-decoration: none;
   color: #000000;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -189,6 +189,7 @@ hr {
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
 }
+
 
 footer {
   background-color: #ffafb8;
@@ -225,17 +226,18 @@ html {
 }
 
 /* ------------------------- */
-/* Tablet / Mobile */
+/* Mobile Responsive Section */
 /* ------------------------- */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px;   /* reduce padding */
     gap: 30px;
-    margin-top: 80px;
+    margin-top: 80px;     /* push down because navbar is fixed */
   }
 
+  /* Responsive profile picture */
   .profile-pic {
     max-width: 90%;
     height: auto;
@@ -250,109 +252,45 @@ html {
     padding: 0 10px;
   }
 
-  main h1 {
-    font-size: 2.2rem;
-  }
-
+  main h1,
   main h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   main p {
     font-size: 1rem;
   }
 
+  /* Sticky navbar (use fixed for Instagram compatibility) */
   nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
   }
 
   nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 1rem;
-    padding: 6px 10px;
-  }
-
-  .projects {
-    padding: 20px;
-  }
-
-  .projects-text h1 {
-    font-size: 2rem;
-  }
-
-  .project-card {
-    max-width: 500px;
-    margin: 0 auto 20px auto;
-  }
-
-  .project-card h2,
-  .project-card h2 a {
-    font-size: 1.3rem;
-  }
-
-  .project-card p {
-    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .footer-icons img {
     width: 30px;
     height: 30px;
   }
-
-  .footer-text {
-    font-size: 0.9rem;
-  }
 }
 
-/* ------------------------- */
-/* Extra Small Phones */
-/* ------------------------- */
+/* Extra small phones (e.g. Instagram browser on iPhone SE) */
 @media (max-width: 480px) {
-  main h1 {
+  main h1,
+  main h2 {
     font-size: 1.6rem;
   }
 
-  main h2 {
-    font-size: 1.3rem;
-  }
-
   main p {
-    font-size: 0.9rem;
-  }
-
-  nav ul {
-    gap: 8px;
-  }
-
-  .projects-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .project-card {
-    padding: 18px;
-  }
-
-  .project-card h2,
-  .project-card h2 a {
     font-size: 1.1rem;
-  }
-
-  .project-card p {
-    font-size: 0.85rem;
-  }
-
-  .footer-text {
-    font-size: 0.8rem;
   }
 }
 
+I want my website to look better on mobile
